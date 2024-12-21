@@ -3,19 +3,19 @@
 #include <chrono>
 
 
+#include "number/number.h"
+
+#define NUM_DIG 100
 
 
-
-
-
-
-
-long long int fibo(int n){
+number fibo(int n){
 
     
-    long long int first = 1;
-    long long int second = 1;
-    long long int temp;
+    number first = number(NUM_DIG);
+    first.arr[0] = '1';
+    number second = number(NUM_DIG);
+    second.arr[0] = '1';
+    number temp = number(NUM_DIG);
 
     for(int i = 0; i < n; i++){
         temp = second;
@@ -35,13 +35,13 @@ void test(int n){
 
     for(int i = 1; i < n; i *= 10){
         auto start = std::chrono::high_resolution_clock::now();
-        auto fib = fibo(i);
+        auto fib = fibo((long long) i);
         auto end = std::chrono::high_resolution_clock::now();
 
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
         if(duration <= std::chrono::milliseconds(1000)){
-            std::cout <<"for n = " << i << " fib number = "<< fib << "\n";
+            std::cout <<"for n = " << i << " fib number = "<< fib.to_string() << "\n";
             std::cout << "time = " << duration.count() << "\n";
             std::cout << std::endl;
         }
@@ -58,9 +58,7 @@ void test(int n){
 
 int main(){
 
-    int num = 1000000;
-
-    std::cout << fibo(1000000);
+    test(1000000);
 
     return 0;
 }

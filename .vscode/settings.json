@@ -9,6 +9,8 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "ratio": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "stdexcept": "cpp",
+        "sstream": "cpp"
     }
 }
