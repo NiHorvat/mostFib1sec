@@ -2,6 +2,12 @@
 #include <cstdint>
 #include <sstream>
 
+
+#ifndef NUMBER_H
+#define NUMBER_H
+
+using namespace std;
+
 class number {
 
 public:
@@ -13,6 +19,8 @@ public:
 
     number operator+(const number& other);
 
-    std::string to_string();
+    string to_string();
 
 };
+
+#endif

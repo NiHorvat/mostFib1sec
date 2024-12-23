@@ -5,7 +5,7 @@
 
 #include "number/number.h"
 
-#define NUM_DIG 100
+#define NUM_DIG 10000
 
 
 number fibo(int n){
@@ -58,7 +58,7 @@ void test(int n){
 
 int main(){
 
-    test(1000000);
+    std::cout << fibo(30000).to_string();
 
     return 0;
 }
