@@ -58,6 +58,8 @@ void test(long long int n){
 
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
+        
+
         if(duration <= std::chrono::milliseconds(1000)){
             std::cout <<"for n = " << i << " fib number = "<< fib.to_string() << "\n";
             std::cout << "time = " << duration.count() << "\n";
