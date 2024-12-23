@@ -1,0 +1,1 @@
+ono kuis buraz probam generirati cim VECI fibonačijev broj unutar jedne sekunde kuis ono hahahahah
