@@ -3,8 +3,7 @@
 #include <sstream>
 
 
-#ifndef NUMBER_H
-#define NUMBER_H
+#pragma once
 
 using namespace std;
 
@@ -21,6 +20,6 @@ public:
 
     string to_string();
 
+
 };
 
-#endif

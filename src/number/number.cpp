@@ -1,9 +1,6 @@
 #include "number.h"
 
 
-    
-
-
 number::number(long long int num_digits){
 
     arr = new char [num_digits];
@@ -42,4 +39,6 @@ string number::to_string(){
     }
     return s;
 }
+
+
 
