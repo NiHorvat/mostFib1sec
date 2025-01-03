@@ -1,18 +1,13 @@
 #include <iostream>
-#include <cstdint>
-#include <chrono>
 
+#include "number/number.h"
+
+using namespace std;
 
 
 int main(){
 
-
-    bool b1 = true;
-    bool b2 = true;
-    bool b3 = b1 + b2;
-
-
-    std::cout << b3;
+    number *a = new number(2);
 
     return 0;
 }

@@ -7,7 +7,6 @@
 
 #include "number/number.h"
 
-#define NUM_DIG 10000
 
 
 long long numberOfDigits(long long n)
@@ -24,7 +23,7 @@ long long numberOfDigits(long long n)
 
 
 
-number fibo(int n){
+number fibo(long long int n){
 
     long long int num_digits = numberOfDigits(n);
     num_digits += 10;
@@ -41,15 +40,8 @@ number fibo(int n){
         first = temp;
     }
 
-    
-
     return second;
 }
-
-
-
-
-
 
 
 void test(long long int n){
@@ -59,7 +51,7 @@ void test(long long int n){
     for(long long int i = 10000; i < n; i +=1000){
     try{
         auto start = std::chrono::high_resolution_clock::now();
-        number fib = fibo((long long) i);
+        number fib = fibo(i);
         auto end = std::chrono::high_resolution_clock::now();
 
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);

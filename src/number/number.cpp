@@ -46,6 +46,26 @@ number &number::operator=(const number &other){
 
     return *this;
 }
+
+number &number::operator=(const long long int &other){
+
+    string temp = std::to_string(other);
+    long long int num_digits = temp.size();
+
+    delete this->arr;
+    this->num_digits = num_digits;
+
+    this->arr = new char[this->num_digits];
+
+    for(long long int i = 0; i < this->num_digits; i++){
+        this->arr[i] = temp[i];
+    }
+
+    return *this;
+
+}
+
+
 string number::to_string(){
     string s = "";
     for(int i = num_digits - 1; i >= 0; i--){
@@ -53,12 +73,11 @@ string number::to_string(){
     }
     return s;
 }
+
 ostream & operator << (ostream &out, number &n){
 
     out << n.to_string();
     out << "\n";
-
-
 
     return out;
 }   

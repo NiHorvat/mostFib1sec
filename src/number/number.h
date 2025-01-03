@@ -21,6 +21,8 @@ public:
 
     number &operator=(const number& other);
 
+    number &operator=(const long long int &other);
+
     string to_string();
 
     friend ostream &operator<<(ostream &out,number &n);    
