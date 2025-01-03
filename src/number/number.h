@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstdint>
 #include <sstream>
+#include <string>
+#include <bits/stdc++.h>
 
 
-#pragma once
 
 using namespace std;
 
@@ -14,6 +15,8 @@ public:
 
     char* arr;  
     long long int num_digits; 
+
+    number();
 
     number(long long int num_digits);
 
