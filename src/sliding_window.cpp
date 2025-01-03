@@ -33,13 +33,16 @@ number fibo(int n){
     first.arr[0] = '1';
     number second = number(num_digits);
     second.arr[0] = '1';
-    number temp = number(num_digits);
+    number temp =  number(num_digits);
 
     for(int i = 0; i < n; i++){
         temp = second;
         second = second + first;
         first = temp;
     }
+
+    
+
     return second;
 }
 
@@ -51,7 +54,10 @@ number fibo(int n){
 
 void test(long long int n){
 
-    for(long long int i = 28000; i < n; i+=1){
+    std::cout << "starting test..." << std::endl;
+
+    for(long long int i = 10000; i < n; i +=1000){
+    try{
         auto start = std::chrono::high_resolution_clock::now();
         number fib = fibo((long long) i);
         auto end = std::chrono::high_resolution_clock::now();
@@ -68,10 +74,13 @@ void test(long long int n){
         }
         else{
             break;
+            }
         }
-
-
+        catch(overflow_error e){
+            std::cout << e.what() << std::endl;
+        }
     }
+
 
 
 }

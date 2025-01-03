@@ -18,8 +18,9 @@ public:
 
     number operator+(const number& other);
 
-    string to_string();
+    number &operator=(const number& other);
 
+    string to_string();
 
 };
 

@@ -17,7 +17,6 @@ number number::operator+(const number & other){
 
     number output(num_digits);
 
-
     char carry = 0;
     char res;
     for(int i = 0; i < num_digits; i++){
@@ -31,6 +30,22 @@ number number::operator+(const number & other){
     return output;
 };
 
+number &number::operator=(const number &other){
+    
+    if (this == &other) {
+        return *this; 
+    }
+    this->num_digits = other.num_digits;
+
+    delete[] this->arr;
+    this->arr = new char[this->num_digits];
+
+    for(long long int i = 0; i < this->num_digits; i++){
+        this->arr[i] = other.arr[i];
+    }
+
+    return *this;
+}
 
 string number::to_string(){
     string s = "";
@@ -39,6 +54,7 @@ string number::to_string(){
     }
     return s;
 }
+
 
 
 
