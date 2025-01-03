@@ -67,7 +67,7 @@ void test(long long int n){
         
 
         if(duration <= std::chrono::milliseconds(1000)){
-            std::cout <<"for n = " << i << " fib number = "<< fib.to_string() << "\n";
+            std::cout <<"for n = " << i << " fib number = "<< fib << "\n";
             std::cout << "time = " << duration.count() << "\n";
             std::cout << std::endl;
 

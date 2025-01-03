@@ -46,7 +46,6 @@ number &number::operator=(const number &other){
 
     return *this;
 }
-
 string number::to_string(){
     string s = "";
     for(int i = num_digits - 1; i >= 0; i--){
@@ -54,6 +53,15 @@ string number::to_string(){
     }
     return s;
 }
+ostream & operator << (ostream &out, number &n){
+
+    out << n.to_string();
+    out << "\n";
+
+
+
+    return out;
+}   
 
 
 

@@ -8,6 +8,7 @@
 using namespace std;
 
 class number {
+    
 
 public:
 
@@ -22,5 +23,8 @@ public:
 
     string to_string();
 
+    friend ostream &operator<<(ostream &out,number &n);    
+
 };
 
+    
